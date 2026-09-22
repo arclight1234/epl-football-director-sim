@@ -1,0 +1,16 @@
+# Local working files
+work/
+
+# Temporary and editor files
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+
+# Private runtime state and secrets
+.env
+.env.*
+!.env.example
+credentials*
+secrets*
+
