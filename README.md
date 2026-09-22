@@ -15,6 +15,7 @@
 - `docs/DESIGN.md`: 현재까지 합의한 시스템 설계
 - `docs/DECISIONS.md`: 확정 사항과 이유
 - `docs/ROADMAP.md`: 앞으로 논의하고 제작할 순서
+- `docs/SYNC.md`: 다른 컴퓨터에서 이어서 작업하는 방법
 - `docs/CHAT_TRANSCRIPT.md`: 현재 작업 대화의 사용자/어시스턴트 공개 메시지 기록
 - `docs/ORIGINAL_CONVERSATION.md`: 출발점이 된 ChatGPT 대화 요약 기록
 - `references/`: 사용자가 제공한 KBO/LoL 예시 프롬프트 원본

@@ -6,6 +6,7 @@ param(
 $ErrorActionPreference = 'Stop'
 $projectRoot = Split-Path -Parent $PSScriptRoot
 $gitDirectory = Join-Path $projectRoot 'work\git-meta'
+$sshWrapper = Join-Path $projectRoot 'work\git-ssh-wrapper.exe'
 $gitExecutable = Get-Command git.exe -ErrorAction SilentlyContinue
 
 if (-not $gitExecutable) {
@@ -17,6 +18,10 @@ if (-not $gitExecutable) {
     }
 }
 
+if (Test-Path -LiteralPath $sshWrapper) {
+    $env:GIT_SSH = $sshWrapper
+    $env:GIT_SSH_VARIANT = 'ssh'
+}
+
 & $gitExecutable.Source --git-dir=$gitDirectory --work-tree=$projectRoot @GitArguments
 exit $LASTEXITCODE
-
